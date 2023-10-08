@@ -2,10 +2,10 @@
 
 
 
-Final grade : 100/115
+Final grade : 101/115
 Mandatory part : 100/100
 
-Bonus : 0/15
+Bonus : 1/15
 
 How to use it
 Using make will create the minishell executable.
@@ -25,8 +25,6 @@ Finally, you can use Ctrl-C to interrupt and Ctrl-\ to quit a program, as well a
 A few of the functions are "built-in", meaning we don't call the executable, we re-coded them directly. It's the case for echo, pwd, cd, env, export, unset and exit.
 
 Credit
-This two-person project was done with macrespo.
+This two-person project was done with mzohier.
 
-I was responsible for the parsing, argument checking, execution, redirection and piping.
-
-Macrespo took care of the environment variables, built-in functions, and signal handling.
+I was responsible for the execution part : the environment variables, built-in functions, and signal handling
