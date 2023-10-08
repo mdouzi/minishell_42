@@ -2,11 +2,13 @@ Minishell project, recoding our own little bash. A program capable of parsing a 
 
 
 Final grade : 101/115
+
 Mandatory part : 100/100
 
 Bonus : 1/15
 
 How to use it
+
 Using make will create the minishell executable.
 
 Simply run it with :
