@@ -1,30 +1,32 @@
-# Minishell
+2 project, recoding our own little bash. A program capable of parsing a prompt and launching executables with arguments, along with a few built-in functions.
 
-Minishell is a simple Unix shell implementation, created as a project for [Your School or Course Name]. It provides a basic command-line interface and supports a subset of Unix shell commands.
 
-![Demo GIF](demo.gif)
 
-## Table of Contents
+Final grade : 100/115
+Mandatory part : 100/100
 
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Features](#features)
-- [Contributing](#contributing)
-- [License](#license)
+Bonus : 0/15
 
-## Getting Started
+How to use it
+Using make will create the minishell executable.
 
-### Prerequisites
+Simply run it with :
 
-Before you can run Minishell, you need to have the following dependencies installed on your system:
+./minishell
+Available options
+Minishell runs executables from an absolute, relative or environment PATH (/bin/ls or ls), including arguments or options. ' and " work the same as bash, except for multiline commands.
 
-- [List of dependencies and versions]
+You can separate commands with ;, as well as use redirections > >> < and pipes |.
 
-### Installation
+Environment variables are handled, like $HOME, including the return code $?.
 
-1. Clone the repository to your local machine:
+Finally, you can use Ctrl-C to interrupt and Ctrl-\ to quit a program, as well as Ctrl-D to throw an EOF, same as in bash.
 
-   ```bash
-   git clone https://github.com/mdouzi/minishell_42.git
+A few of the functions are "built-in", meaning we don't call the executable, we re-coded them directly. It's the case for echo, pwd, cd, env, export, unset and exit.
+
+Credit
+This two-person project was done with macrespo.
+
+I was responsible for the parsing, argument checking, execution, redirection and piping.
+
+Macrespo took care of the environment variables, built-in functions, and signal handling.
