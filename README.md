@@ -1,31 +1,46 @@
-Minishell project, recoding our own little bash. A program capable of parsing a prompt and launching executables with arguments, along with a few built-in functions.
+# Minishell
 
+Minishell is a project that involves recoding a simple shell similar to Bash. It is capable of parsing commands, launching executables with arguments, and implementing several built-in functions.
 
-Final grade : 101/115
+## Final Grade
+- **Overall**: 101/115
+- **Mandatory Part**: 100/100
+- **Bonus**: 1/15
 
-Mandatory part : 100/100
+## Features
+- Executes commands from absolute, relative, or environment PATH (`/bin/ls`, `ls`)
+- Supports command arguments and options
+- Handles single and double quotes like Bash (except for multiline commands)
+- Supports command separators (`;`), redirections (`>`, `>>`, `<`), and pipes (`|`)
+- Environment variable expansion (`$HOME`, `$?` for return codes)
+- Signal handling: 
+  - `Ctrl-C` to interrupt
+  - `Ctrl-\` to quit
+  - `Ctrl-D` to send EOF
+- Built-in commands:
+  - `echo`
+  - `pwd`
+  - `cd`
+  - `env`
+  - `export`
+  - `unset`
+  - `exit`
 
-Bonus : 1/15
+## Installation
+To compile Minishell, run:
+```sh
+make
+```
 
-How to use it
-
-Using make will create the minishell executable.
-
-Simply run it with :
-
+## Usage
+To launch Minishell, simply run:
+```sh
 ./minishell
-Available options
-Minishell runs executables from an absolute, relative or environment PATH (/bin/ls or ls), including arguments or options. ' and " work the same as bash, except for multiline commands.
+```
 
-You can separate commands with ;, as well as use redirections > >> < and pipes |.
+## Authors
+- Mohamed Douzi
 
-Environment variables are handled, like $HOME, including the return code $?.
+## License
+This project is part of the 42 curriculum and follows its academic integrity rules.
 
-Finally, you can use Ctrl-C to interrupt and Ctrl-\ to quit a program, as well as Ctrl-D to throw an EOF, same as in bash.
-
-A few of the functions are "built-in", meaning we don't call the executable, we re-coded them directly. It's the case for echo, pwd, cd, env, export, unset and exit.
-
-Credit
-This two-person project was done with mzohier.
-
-I was responsible for the execution part : the environment variables, built-in functions, and signal handling
